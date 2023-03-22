@@ -7,7 +7,7 @@ import apps.kulwinder.dogapp.data.local.breeds.BreedsDao
 import apps.kulwinder.dogapp.model.Breed
 
 @Database(entities = [Breed::class], version = 1)
-@TypeConverters(Converters::class)
+@TypeConverters(StringListConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun breedsDao(): BreedsDao
 }
